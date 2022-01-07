@@ -1,10 +1,11 @@
-
 import os
 
-
 class DriverLocations:
-    
-    DRIVERS_FOLDER = os.path.join(os.getcwd(), "FRAMEWORK_PMPSURVEY", "drivers", "")
+
+    """The OS Module will get the current root directory and 
+    add the 'drivers' subfolder to the driver path."""
+
+    DRIVERS_FOLDER = os.path.join(os.getcwd(), "drivers", "")
 
     def get_Chrome_driver_location(self):
         return self.DRIVERS_FOLDER + "chromedriver.exe"
@@ -15,4 +16,5 @@ class DriverLocations:
     def get_Edge_driver_location(self):
         return self.DRIVERS_FOLDER + "msedgedriver.exe"
 
-        
+
+driverpath = DriverLocations()
